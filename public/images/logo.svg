@@ -1,0 +1,129 @@
+<svg width="250" height="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 80" class="sitrin-logo">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C9A961;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B08D4A;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes rotateCrescent {
+        0%, 100% { transform: rotate(0deg); opacity: 0.9; }
+        50% { transform: rotate(3deg); opacity: 1; }
+      }
+
+      @keyframes fadeInText {
+        0% { opacity: 0; transform: translateX(-10px); }
+        100% { opacity: 1; transform: translateX(0); }
+      }
+
+      @keyframes shimmer {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.7; }
+      }
+
+      @keyframes floatStar {
+        0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(0, -3px) scale(1.2); opacity: 1; }
+      }
+
+      .sitrin-logo .crescent-group {
+        transform-origin: 35px 40px;
+        animation: rotateCrescent 8s ease-in-out infinite;
+      }
+
+      .sitrin-logo .main-text {
+        animation: fadeInText 1.5s ease-out forwards;
+      }
+
+      .sitrin-logo .pattern-detail {
+        animation: shimmer 4s ease-in-out infinite;
+      }
+
+      .sitrin-logo .star-accent {
+        animation: floatStar 3s ease-in-out infinite;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .sitrin-logo * {
+          animation: none !important;
+        }
+      }
+    </style>
+  </defs>
+  
+  <!-- Ornate Crescent Moon -->
+  <g class="crescent-group" filter="url(#glow)">
+    <!-- Main crescent shape -->
+    <path d="M 35 15 Q 25 40 35 65 Q 45 50 45 40 Q 45 30 35 15 Z" 
+          fill="url(#goldGradient)" 
+          stroke="#D4AF37" 
+          stroke-width="0.5"/>
+    
+    <!-- Inner decorative patterns -->
+    <circle class="pattern-detail" cx="38" cy="28" r="2.5" fill="none" stroke="#F5F1E8" stroke-width="0.5" opacity="0.4"/>
+    <circle class="pattern-detail" cx="38" cy="40" r="3" fill="none" stroke="#F5F1E8" stroke-width="0.5" opacity="0.4"/>
+    <circle class="pattern-detail" cx="38" cy="52" r="2.5" fill="none" stroke="#F5F1E8" stroke-width="0.5" opacity="0.4"/>
+    
+    <!-- Geometric details -->
+    <path class="pattern-detail" d="M 36 35 L 40 35 M 38 33 L 38 37" 
+          stroke="#F5F1E8" 
+          stroke-width="0.5" 
+          opacity="0.5"/>
+    <path class="pattern-detail" d="M 36 45 L 40 45 M 38 43 L 38 47" 
+          stroke="#F5F1E8" 
+          stroke-width="0.5" 
+          opacity="0.5"/>
+    
+    <!-- Dots pattern -->
+    <circle cx="37" cy="23" r="0.5" fill="#F5F1E8" opacity="0.6"/>
+    <circle cx="37" cy="32" r="0.5" fill="#F5F1E8" opacity="0.6"/>
+    <circle cx="37" cy="48" r="0.5" fill="#F5F1E8" opacity="0.6"/>
+    <circle cx="37" cy="57" r="0.5" fill="#F5F1E8" opacity="0.6"/>
+  </g>
+  
+  <!-- Star accent -->
+  <g class="star-accent">
+    <circle cx="35" cy="12" r="1.5" fill="url(#goldGradient)" filter="url(#glow)"/>
+    <circle cx="35" cy="12" r="0.8" fill="#F5F1E8" opacity="0.8"/>
+  </g>
+  
+  <!-- SITRIN Text -->
+  <text class="main-text" 
+        x="60" 
+        y="45" 
+        font-family="'Cormorant Garamond', serif, Arial" 
+        font-size="36" 
+        font-weight="600" 
+        fill="#1B4332" 
+        letter-spacing="3">SITRIN</text>
+  
+  <!-- Ramadan text in Arabic style -->
+  <text class="main-text" 
+        x="60" 
+        y="58" 
+        font-family="'Cormorant Garamond', serif, Arial" 
+        font-size="11" 
+        font-weight="400" 
+        fill="url(#goldGradient)" 
+        letter-spacing="2" 
+        opacity="0.8">RAMADAN COLLECTION</text>
+  
+  <!-- Elegant underline -->
+  <line x1="60" y1="62" x2="245" y2="62" 
+        stroke="url(#goldGradient)" 
+        stroke-width="0.8" 
+        opacity="0.5"/>
+  
+  <!-- Small decorative stars -->
+  <circle cx="55" cy="45" r="0.8" fill="url(#goldGradient)" opacity="0.6" class="star-accent"/>
+  <circle cx="240" cy="45" r="0.8" fill="url(#goldGradient)" opacity="0.6" class="star-accent"/>
+</svg>

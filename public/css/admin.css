@@ -1,0 +1,78 @@
+/* ====================================
+   SITRIN Admin Panel Styles
+   ==================================== */
+
+:root {
+    --color-gold: #C9A961;
+    --color-green: #1B4332;
+    --color-green-dark: #081C15;
+    --color-beige: #F5EBD8;
+}
+
+/* Admin Sidebar */
+.sidebar {
+    background: var(--color-green-dark);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+    background: var(--color-green);
+}
+
+.sidebar-nav .nav-link {
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-nav .nav-link:hover {
+    background: rgba(201, 169, 97, 0.1);
+    border-left-color: var(--color-gold);
+    padding-left: 1.5rem;
+}
+
+.sidebar-nav .nav-link.active {
+    background: rgba(201, 169, 97, 0.15);
+    border-left-color: var(--color-gold);
+    color: var(--color-gold) !important;
+}
+
+/* Admin Cards */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+.table-hover tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(201, 169, 97, 0.05);
+}
+
+/* Form Controls */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 0.25rem rgba(201, 169, 97, 0.25);
+}
+
+/* Badge Styles */
+.badge {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        position: relative;
+    }
+}
